@@ -93,15 +93,6 @@
                                     <action selector="stop" destination="iK1-yu-RRp" eventType="touchUpInside" id="zBi-xx-lAt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClJ-sK-7re">
-                                <rect key="frame" x="282" y="26" width="77" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.45113525760000001" green="0.89671518610000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="リトライ"/>
-                                <connections>
-                                    <action selector="retry" destination="iK1-yu-RRp" eventType="touchUpInside" id="Kaf-ke-9H2"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tail.png" translatesAutoresizingMaskIntoConstraints="NO" id="A12-1h-HBk">
                                 <rect key="frame" x="168" y="102" width="38" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -122,6 +113,15 @@
                                 <rect key="frame" x="168" y="260" width="38" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClJ-sK-7re">
+                                <rect key="frame" x="282" y="26" width="77" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.45113525760000001" green="0.89671518610000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="リトライ"/>
+                                <connections>
+                                    <action selector="retry" destination="iK1-yu-RRp" eventType="touchUpInside" id="Kaf-ke-9H2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HcN-o2-aei"/>
@@ -150,6 +150,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.45113525760000001" green="0.89671518610000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Topへ"/>
+                                <connections>
+                                    <action selector="toTop" destination="8GP-xj-oTx" eventType="touchUpInside" id="qSb-hY-iN8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ランキング" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOE-gW-Vpe">
                                 <rect key="frame" x="125" y="72" width="123" height="27"/>
@@ -204,6 +207,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hvc-aJ-hF9"/>
                     </view>
+                    <connections>
+                        <outlet property="rankingLabel2" destination="bQk-eA-KTG" id="uTA-1r-LCV"/>
+                        <outlet property="rankingLabel3" destination="Ab6-dx-OMi" id="y3W-dB-57W"/>
+                        <outlet property="rankingLable1" destination="Kwf-dM-fuX" id="f5E-X4-5gy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nip-3u-EzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -67,7 +67,24 @@ class GameViewController: UIViewController {
             score = score - abs(Int(width/2 - positionX[i]))*2  //スコアの計算をする
         }
         resultLabel.text = "Score: " + String(score)    //結果ラベルにスコアを表示する
-        resultLabel.isHighlighted = false   //結果ラベルを隠さない(現す)
+        resultLabel.isHidden = false   //結果ラベルを隠さない(現す)
+        
+        let highScore1: Int = defaults.integer(forKey: "score1")    //ユーザーデフォルトに"score1"というキーの値を取得
+        let highScore2: Int = defaults.integer(forKey: "score2")    //"score2"というキーの値を取得
+        let highScore3: Int = defaults.integer(forKey: "score3")    //"score3"というキーの値を取得
+        
+        if score > highScore1 {     //ランキング1位の記録を更新したら
+            defaults.set(score, forKey: "score1")   //score1というキーでscoreを保存
+            defaults.set(highScore1, forKey: "score2")  //score2というキーでhighScore1(元一位の記録)を保存
+            defaults.set(highScore2, forKey: "score3")  //score3というキーでhighScore2(元2位の記録)を保存
+        } else if score > highScore2 {
+            defaults.set(score, forKey: "score2")   //score2というキーでsocreを保存
+            defaults.set(highScore2, forKey: "score3")  //score3というキーでhighScore2(元２位の記録)を保存
+        } else if score > highScore3 {
+            defaults.set(score, forKey: "score3")
+        }
+        
+        
     }
     
     @IBAction func retry() {
@@ -81,5 +98,6 @@ class GameViewController: UIViewController {
     @IBAction func toTop() {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
+    
 }
