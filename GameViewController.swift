@@ -23,7 +23,7 @@ class GameViewController: UIViewController {
      値の保存をするときにUserDefaultsを使用する。ここに保存された値はアプリを閉じても保存される
      */
     
-    let width: CGFloat = UIScreen.main.bounds.size.width     //画面幅(UIScreen.main.bounds.size.widthでiPhoneの画面サイズを取得する)
+    let width: CGFloat = UIScreen.main.bounds.size.width     //画面幅(UIScreen.main.bounds.size.widthでiPhoneの画面サイズを取得する。)
     
     var positionX: [CGFloat] = [0.0, 0.0, 0.0]  //画像の位置の配列
     
